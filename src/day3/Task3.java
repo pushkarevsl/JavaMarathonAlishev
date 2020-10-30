@@ -24,8 +24,8 @@ public class Task3 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(new InputStreamReader(System.in));
-        double x = 0;
-        double y = 0;
+        double x;
+        double y;
         int count = 0;
 
         while (count < 5) {
@@ -38,7 +38,6 @@ public class Task3 {
                 System.out.println("Деление на 0");
                 continue;
             }
-
             System.out.println(x / y);
         }
     }
