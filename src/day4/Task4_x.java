@@ -14,7 +14,7 @@ import java.util.Random;
  * 11535
  * 5
  */
-public class Task4 {
+public class Task4_x {
 
     public static void main(String[] args) {
 
