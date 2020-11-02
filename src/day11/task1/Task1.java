@@ -13,8 +13,6 @@ public class Task1 {
         picker.doWork();
         courier.doWork();
 
-        System.out.println(warehouse + " " + picker + " " + courier);
-
         picker.bonus();
         courier.bonus();
         System.out.println(warehouse + " " + picker + " " + courier);
@@ -25,10 +23,9 @@ public class Task1 {
         }
 
         System.out.println(warehouse + " " + picker + " " + courier);
+
         picker.bonus();
         courier.bonus();
         System.out.println(warehouse + " " + picker + " " + courier);
-
-
     }
 }
