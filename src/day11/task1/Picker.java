@@ -2,12 +2,9 @@ package day11.task1;
 
 public class Picker implements Worker {
 
-    private int salary;
-    private Warehouse warehouse;
+    Warehouse warehouse = new Warehouse();
 
-    public Picker(Warehouse warehouse) {
-        this.warehouse = warehouse;
-    }
+    private int salary;
 
     public int getSalary() {
         return salary;
@@ -15,22 +12,23 @@ public class Picker implements Worker {
 
     @Override
     public void doWork() {
-        warehouse.setCountOrder(warehouse.getCountOrder() + 1);
         salary += 80;
+        warehouse.setCountOrder(warehouse.getCountOrder() + 1);
     }
 
     @Override
     public void bonus() {
-
-        if(warehouse.getBalance()>1500){
-            salary*=3;
+        if (warehouse.getCountOrder() > 1500) {
+            salary *= 3;
         }
+    }
+
+    public Picker(Warehouse warehouse) {
+        this.warehouse = warehouse;
     }
 
     @Override
     public String toString() {
-        return "Picker{" +
-                "salary=" + salary +
-                '}';
+        return "{salary=" + salary +"}";
     }
 }

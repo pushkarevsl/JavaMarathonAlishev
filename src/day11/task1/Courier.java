@@ -3,12 +3,7 @@ package day11.task1;
 public class Courier implements Worker {
 
     private int salary;
-
-    private Warehouse warehouse;
-
-    public Courier(Warehouse warehouse) {
-        this.warehouse = warehouse;
-    }
+    Warehouse warehouse;
 
     public int getSalary() {
         return salary;
@@ -16,21 +11,24 @@ public class Courier implements Worker {
 
     @Override
     public void doWork() {
-        warehouse.setBalance(warehouse.getBalance() + 1000);
         salary += 100;
+        warehouse.setBalance(warehouse.getBalance() + 1000);
     }
 
     @Override
     public void bonus() {
         if (warehouse.getBalance() > 1_000_000) {
-          salary*=2;
+            salary *= 2;
         }
+    }
+
+    public Courier(Warehouse warehouse) {
+        this.warehouse = warehouse;
     }
 
     @Override
     public String toString() {
-        return "Courier{" +
-                "salary=" + salary +
+        return "{salary=" + salary +
                 '}';
     }
 }
