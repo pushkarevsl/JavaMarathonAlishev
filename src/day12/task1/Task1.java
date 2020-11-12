@@ -21,6 +21,8 @@ public class Task1 {
 
         autos.add(2, new Auto("Niva"));
 
+        System.out.println(autos);
+
         autos.remove(3);
 
         System.out.println(autos);

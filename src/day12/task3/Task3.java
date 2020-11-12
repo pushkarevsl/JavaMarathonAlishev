@@ -1,6 +1,7 @@
 package day12.task3;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -31,7 +32,12 @@ public class Task3 {
             add(new MusicBand("Иванушки8", 2010));
         }};
 
+        Collections.shuffle(musicBands);
+        System.out.println(musicBands);
+        System.out.println(" * * * ");
         System.out.println(groupsAfter2000(musicBands));
+
+
     }
 
     public static List<MusicBand> groupsAfter2000(List<MusicBand> bands) {
