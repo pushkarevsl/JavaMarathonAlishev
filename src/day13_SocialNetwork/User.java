@@ -47,7 +47,7 @@ public class User {
     }
 
     public void sendMessage(User user, String text) {
-//TODO
+        MessageDatabase.sendMessage(this, user, text);
     }
 
     public String toString(){
