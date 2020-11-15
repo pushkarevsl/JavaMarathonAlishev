@@ -29,7 +29,7 @@ public class MessageDatabase {
             if (message.getSender().equals(u1) && message.getReceiver().equals(u2)
                     ||
                     message.getSender().equals(u2) && message.getReceiver().equals(u1)) {
-                System.out.println(message.getSender() + ": " + message.getReceiver());
+                System.out.println(message.getSender() + ": " + message.getText());
             }
         }
     }

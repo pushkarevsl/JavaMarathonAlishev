@@ -32,10 +32,8 @@ public class User {
     // Прохожу по списку подписок для текущего юзера,
     //если имя совпадает то возвразщаю тру
     public boolean isSubscribed(User user) {
-        for (User currentUser : subscriptions) {
-            if (currentUser.getUserName().equals(user)) {
-                return true;
-            }
+        if (this.subscriptions.contains(user)) {
+            return true;
         }
         return false;
     }
@@ -50,7 +48,7 @@ public class User {
         MessageDatabase.sendMessage(this, user, text);
     }
 
-    public String toString(){
+    public String toString() {
         return userName;
     }
 
