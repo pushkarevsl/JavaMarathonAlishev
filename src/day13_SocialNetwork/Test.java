@@ -15,19 +15,17 @@ public class Test {
         user2.sendMessage(user1, "Привет Tanya!");
         user2.sendMessage(user1, "Все супер, сегодня счетчик меняли, страшно было");
 
-
         user2.sendMessage(user3, "Привет, толстуша! Жрала!!!");
         user2.sendMessage(user3, "Ты спала или жрала?");
 
         user3.sendMessage(user2, "Кошке не принято такое говорить");
         user3.sendMessage(user2, "И спала и жрала");
 
-
         user1.sendMessage(user3, "Толстуша!! Ты жрать будешь?");
 
         user3.sendMessage(user1, "Да буду жрать, накладывай");
 
-        MessageDatabase.showDialog(user2, user3);
+        MessageDatabase.showDialog(user1, user2);
 
     }
 }
