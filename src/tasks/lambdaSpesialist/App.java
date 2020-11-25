@@ -10,6 +10,16 @@ public class App {
         //event subscribe - подписка на событие
         sw.addElectricityListener(radio);
         sw.addElectricityListener(lamp);
+
+        sw.addElectricityListener(
+                new ElectricityConsumer() {
+                    @Override
+                    public void electricityOn() {
+                        System.out.println("Пожар");
+                    }
+                }
+        );
+
         sw.switchOn();
     }
 }
